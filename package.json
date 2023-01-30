@@ -1,0 +1,12 @@
+{
+  "name": "doppio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^12.4.1"
+  },
+  "scripts": {
+    "start": "cypress open"
+  }
+}
