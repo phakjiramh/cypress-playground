@@ -8,5 +8,8 @@
   },
   "scripts": {
     "start": "cypress open"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.16.1"
   }
 }
