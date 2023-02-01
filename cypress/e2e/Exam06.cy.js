@@ -2,7 +2,7 @@ describe("Example06", () => {
   beforeEach(() => {
     cy.visit("../../ex06.html");
   });
-  it("input UsernameAndPassWord", () => {
+  it("input UsernameAndPassWordAndNickname", () => {
     cy.randomStringOfLength().then((randomUsername) => {
       cy.get("div")
         .contains("User:")
