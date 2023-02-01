@@ -10,8 +10,8 @@ describe("Example 00", () => {
 
   //เราอยาก random ตัวอักษร ก็ไปสร้างฟังชั่นใน commands ก่อน
   it("input Username", () => {
-    cy.randomStringFunction(5).then((randomUserName) => {
-      cy.get("#username-box").type(randomUserName);
+    cy.randomStringOfLength(5).then((randomUsername) => {
+      cy.get("#username-box").type(randomUsername);
     });
   });
 
@@ -23,8 +23,8 @@ describe("Example 00", () => {
   });
 
   it("input UsernameAndPassword", () => {
-    cy.randomStringFunction(5).then((randomUserName) => {
-      cy.get("#username-box").type(randomUserName);
+    cy.randomStringOfLength(5).then((randomUsername) => {
+      cy.get("#username-box").type(randomUsername);
     });
     cy.randomStringAndNumber(8).then((randomPassword) => {
       cy.get("#password-box").type(randomPassword);

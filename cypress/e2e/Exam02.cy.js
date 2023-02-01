@@ -3,7 +3,7 @@ describe("Example02 ", () => {
     cy.visit("../../ex02.html");
   });
   it("input Username", () => {
-    cy.randomStringFunction(5).then((randomUsername) => {
+    cy.randomStringOfLength(5).then((randomUsername) => {
       cy.get('div[v="username"]').find("input").type(randomUsername);
     });
   });
@@ -13,7 +13,7 @@ describe("Example02 ", () => {
     });
   });
   it("input UsernameAndPassword", () => {
-    cy.randomStringFunction(5).then((randomUsername) => {
+    cy.randomStringOfLength(5).then((randomUsername) => {
       cy.get('div[v="username"]').find("input").type(randomUsername);
     });
     cy.randomStringAndNumber(8).then((randomPassword) => {

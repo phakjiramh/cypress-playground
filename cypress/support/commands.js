@@ -24,7 +24,7 @@
 // // -- This will overwrite an existing command --
 // // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// Cypress.Commands.add("randomStringFunction", (length) => {
+// Cypress.Commands.add("randomStringOfLength", (length) => {
 //   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 //   let result = "";

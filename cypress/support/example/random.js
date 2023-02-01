@@ -1,15 +1,15 @@
-Cypress.Commands.add("randomStringFunction", (length) => {
-  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+// Cypress.Commands.add("randomStringOfLength", (length) => {
+//   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-  let result = "";
+//   let result = "";
 
-  const charactersLength = characters.length;
-  for (let index = 0; index < length; index++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
+//   const charactersLength = characters.length;
+//   for (let index = 0; index < length; index++) {
+//     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//   }
 
-  return result;
-});
+//   return result;
+// });
 
 Cypress.Commands.add("randomStringAndNumber", (length) => {
   const characters =
@@ -22,4 +22,23 @@ Cypress.Commands.add("randomStringAndNumber", (length) => {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
+});
+
+Cypress.Commands.add("randomStringOfLength", (length) => {
+  function randomStringOfLength({ min, max }) {
+    const length = Math.random() * (max - min + 1) + min;
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    let result = "";
+
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+      console.log();
+    }
+
+    return result;
+  }
+  return randomStringOfLength({ min: 5, max: 15 });
 });

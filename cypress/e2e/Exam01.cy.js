@@ -4,7 +4,7 @@ describe("Example 01", () => {
   });
 
   it("input Username", () => {
-    cy.randomStringFunction(5).then((randomeUsername) => {
+    cy.randomStringOfLength().then((randomeUsername) => {
       cy.get("input[v='user']").type(randomeUsername);
     });
   });
@@ -14,7 +14,7 @@ describe("Example 01", () => {
     });
   });
   it("input UsernameAndPassword", () => {
-    cy.randomStringFunction(5).then((randomeUsername) => {
+    cy.randomStringOfLength().then((randomeUsername) => {
       cy.get("input[v='user']").type(randomeUsername);
     });
     cy.randomStringAndNumber(8).then((randomePassword) => {
