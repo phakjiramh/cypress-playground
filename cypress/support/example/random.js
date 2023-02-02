@@ -1,3 +1,4 @@
+//function ที่กำหนด legth ตายตัว
 // Cypress.Commands.add("randomStringOfLength", (length) => {
 //   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -24,6 +25,7 @@ Cypress.Commands.add("randomStringAndNumber", (length) => {
   return result;
 });
 
+//function ที่กำหนด lengthตาม min max
 Cypress.Commands.add("randomStringOfLength", (length) => {
   function randomStringOfLength({ min, max }) {
     const length = Math.random() * (max - min + 1) + min;
